@@ -1,393 +1,289 @@
 <!doctype html>
 <html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/wbz6vzw.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Marea Sur</title>
+        <!--Logo Icon-->
+        <link rel="shortcut icon" href="assets/logoVariante.png">
+        <!-- Animated -->
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://use.typekit.net/wbz6vzw.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
 
-    <!-- Locomotive Scroll -->
-    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet">
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="css/main.css">
 
-    <!-- Splitting -->
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css">
-
-
-     <!-- <link rel="stylesheet" href="css/aos.css"> -->
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/main.css">
-
-
-</head>
-<body>
-    <div class="preloader" id="js-preloader">
-        <div class="preloader__img">
-          <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="95.113px" viewBox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve">
-            <g>
-              <path class="path path_top" fill="none" stroke-opacity="0.4" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"/>
-              <animate attributeName="stroke-opacity" attributeType="XML" dur="1s" values="0.4; 1.0; 0.4" repeatCount="indefinite"></animate>
-            </g>
-            <g>
-              <path class="path path_middle" fill="none" stroke-opacity="0.7" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"/>
-            </g>
-            <g>
-              <path class="path path_bottom" fill="none" stroke-opacity="1" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"/>
-            </g>
-            <text id="js-load-percent" class="preloader__text" transform="matrix(1 0 0 1 19.9785 20.5957)">100%</text>
-          </svg>
+    </head>
+    <body>
+        <!------------------ Preloader ---------------->
+        <div class="preloader" id="js-preloader">
+            <div class="preloader__img">
+            <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="95.113px" viewBox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve">
+                <g>
+                <path class="path path_top" fill="none" stroke-opacity="0.4" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"/>
+                <animate attributeName="stroke-opacity" attributeType="XML" dur="1s" values="0.4; 1.0; 0.4" repeatCount="indefinite"></animate>
+                </g>
+                <g>
+                <path class="path path_middle" fill="none" stroke-opacity="0.7" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"/>
+                </g>
+                <g>
+                <path class="path path_bottom" fill="none" stroke-opacity="1" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"/>
+                </g>
+                <text id="js-load-percent" class="preloader__text" transform="matrix(1 0 0 1 19.9785 20.5957)">100%</text>
+            </svg>
+            </div>
         </div>
-      </div>
 
-      
-
-    <!-- Menu -->
-    <header>
-        <nav class="nav_menu" data-aos="fade-up">
-            <div class="menu">
-                <ul class="menu-left">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                </ul>
-                <div class="logo">
-                    <img src="logo.png" alt="Logo">
+        <!------------------ Menu ---------------->
+        <header>
+            <nav class="nav_menu animate__animated animate__fadeInDown">
+                <div class="menu">
+                    <ul class="menu-left">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                    <div class="logo">
+                        <img src="logo.png" alt="Logo">
+                    </div>
+                    <ul class="menu-right">
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
-                <ul class="menu-right">
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav> 
-        <!-- Menu Responsive -->
-        <div class="menuResponsive">
-            <!-- <div class="logoResponsive ">
-                <img src="logo.png" alt="Logo">
-            </div> -->
+            </nav> 
 
-            <div class="navigation">
-                <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-                <label for="nav-toggle" class="navigation__button">
-                  <span class="navigation__icon" aria-label="toggle navigation menu"></span>
-                </label>
-                <div class="navigation__background"></div>
-          
-                <nav class="navigation__nav" role="navigation">
-                  <ul class="navigation__list">
-                    <li class="navigation__item">
-                      <a href="#about" class="navigation__link"><span>01</span>About</a>
-                    </li>
-                    <li class="navigation__item">
-                      <a href="#services" class="navigation__link"><span>02</span>Services</a>
-                    </li>
-                    <li class="navigation__item">
-                      <a href="#portfolio" class="navigation__link"><span>03</span>Portfolio</a>
-                    </li>
-                    <li class="navigation__item">
-                      <a href="#contactio" class="navigation__link"><span>04</span>Contacto</a>
-                    </li>
-                    <!-- <li class="navigation__item">
-                      <a href="#" class="navigation__link"><span>05</span>Contato</a>
-                    </li> -->
-              </ul>
-            </nav>
-          </div>
+            <!-- Menu Responsive -->
+            <div class="menuResponsive">
+
+                <div class="navigation">
+                    <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+                    <label for="nav-toggle" class="navigation__button">
+                        <span class="navigation__icon" aria-label="toggle navigation menu"></span>
+                    </label>
+                    <div class="navigation__background"></div>
             
-           
-        </div>
-
-        
-            
-
-
-    </header>
-
-<main>
-
-    <!--PORTADA-->
-
-    <div class="portada">
-    
-            
-        <div class="frase" data-aos="fade-right">
-
-            <div class="texto">
-                <h2 data-scroll data-scroll-speed="1">Brands <br>are not<br>static</h2>
-            </div>
-            
-
-            <div class="wrapper">
-                <div class="typing-demo" data-scroll data-scroll-speed="2" data-scroll-delay="0.2">
-                    and neither are we.
+                    <nav class="navigation__nav" role="navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a href="#about" class="navigation__link"><span>01</span>About</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#services" class="navigation__link"><span>02</span>Services</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#portfolio" class="navigation__link"><span>03</span>Portfolio</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="#contact" class="navigation__link"><span>04</span>Contacto</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+            
             </div>
-        </div>
 
-        <video class="video" autoplay muted loop data-aos="fade-left">
-            <source src="https://videos.pexels.com/video-files/1918465/1918465-uhd_3840_2160_24fps.mp4" type="video/mp4">
-        </video>
+        </header>
 
-    </div>
+        <main>
 
+            <!--PORTADA-->
 
-    <!--About US-->
+            <div class="portada">
+            
+                <div class="frase animate__animated animate__fadeInLeft">
 
-     <div class="aboutUs" data-aos="fade-right"  >
-        <div class="ab" data-aos="fade-up" data-aos-duration="2000">
-            <h3>
-                Somos una <i class="i">agencia digital </i>en movimiento. <br>
-                El match perfecto entre branding y performance.<br>
-                Un equipo creativo y versátil. <br>
-                Creamos y posicionamos.<br>
-                <i class="i">We take care of your brand.</i>
-            </h3>
-        </div>
-    </div> 
-
-
-
-<!--Scroll lateral
-
-    <div class="wrap">
-        <div class="container">
-      
-            <div class="section section1">-->
-                
-                    <!-- <h2 class="subtitle" id="split">
-                        Somos una <i class="i">agencia digital </i>en movimiento. <br>El match perfecto entre branding y performance.
-                    </h2>              -->
+                    <div class="texto">
+                        <h2 >Brands <br>are not<br>static</h2>
+                    </div>
                     
-                <!-- <div class="box" data-aos="fade-up">
-                    <div class="textanime">
+
+                    <div class="wrapper">
+                        <div class="typing-demo" data-scroll data-scroll-speed="2" data-scroll-delay="0.2">
+                            and neither are we.
+                        </div>
+                    </div>
+                </div>
+
+                <video class="video animate__animated animate__fadeInRight" autoplay muted loop data-aos="fade-left">
+                    <source src="https://videos.pexels.com/video-files/9620654/9620654-hd_1080_1920_30fps.mp4" type="video/mp4">
+                </video>
+
+            </div>
+
+            <!--About US-->
+
+            <div class="aboutUs"  id="about">
+                <div class="ab wow  animate__animated animate__flipInX">
                     <h3>
-                        Somos una <span  class="spanText reveal-text"><i>agencia digital.</i></span> <br> El match perfecto entre <br> <span  class="spanText reveal-text"><i>branding y performance.</i></span>
+                        Somos una <i class="i">agencia digital </i>en movimiento. <br>
+                        El match perfecto entre branding y performance.<br>
+                        Un equipo creativo y versátil. <br>
+                        Creamos y posicionamos.<br>
+                        <i class="apple">We take care of your brand.</i>
                     </h3>
-                    </div>
                 </div>
-                    
+            </div> 
 
-                   
-
+            <!--Servicios-->
+            <div class="lista" id="services">
+                <h3 class="titulo wow  animate__animated animate__backInUp" >services</h3>
+                
+                <nav class="servicesNav wow  animate__animated animate__backInUp">
+                    <ul class="servicesUl" data-aos="fade-up" data-aos-duration="2000">
+                        <li class="serviceslist-item"><a href="">Branding <span class="wave"><img src="assets/wave.png" alt=""></span></a></li>
+                        <li class="serviceslist-item"><a href="">Social <span class="wave"><img src="assets/wave.png" alt=""></span> Media</a></li>
+                        <li class="serviceslist-item"><a href="">Art <span class="wave"><img src="assets/wave.png" alt=""></span> direction</a></li>                     
+                        <li class="serviceslist-item"><a href="">Photo & <span class="wave"><img src="assets/wave.png" alt=""></span>video</a></li>
+                        <li class="serviceslist-item"><a href="">Web <span class="wave"><img src="assets/wave.png" alt=""></span> Design</a></li>
+                        <li class="serviceslist-item"><a href="">Influencer <span class="wave"><img src="assets/wave.png" alt=""></span>marketing</a></li>
+                        <li class="serviceslist-item"><a href="">Performance <span class="wave"><img src="assets/wave.png" alt=""></span></a></li>
+                    </ul>
+                </nav>
             </div>
-          
-            <div class="section section2" >
-                <div class="box" data-aos="fade-up">
-                    <h3 class="glitch" data-text="Un equipo creativo y versátil.">
-                        Un equipo creativo y versátil. 
-                    </h3>
-                    <h3 class="glitch" data-text="Creamos y posicionamos.">
-                        Creamos y posicionamos.
-                    </h3>
-                </div>
 
+            <!--------------------- Porfolio------------------>
+            <div class="lineas-separador" id="portfolio">
+                <img src="assets/line.png" alt="">
             </div>
-        
-            <div class="section section3">
-                <div class="box" data-aos="fade-up">
-                    <h3 class="subtitle">
 
-                        <div class="textanime">
-                            <p>We take care of your brand.</p>
-                            </div> -->
-                        <!-- <i class="i">We take care of your brand.</i> -->
-                    <!-- </h3>
+            <section class="portfolio">
+
+                <h3 class="titulo wow animate__animated animate__backInUp">portfolio</h3>
+
+                <div class="imagen_container wow animate__animated animate__backInLeft" >
+                    <img src="assets/1.png" alt="">
+                    <p><i>Branding</i></p>
                 </div>
-            </div>  
-        </div>
-    </div>
-     -->
-      <!-- <div class="sectionTop top">
-        <p class="title">Love u</p>
-      </div> -->
-
-<!-- <div class="separador">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#ffffff" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,90.7C384,64,480,32,576,48C672,64,768,128,864,138.7C960,149,1056,107,1152,90.7C1248,75,1344,85,1392,90.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-  </svg>
-</div> -->
-
-    <!--Servicios-->
-    <div class="lista" >
-        <h3 class="titulo" data-aos="flip-left" data-aos-duration="1000">services</h3>
-        
-        <nav class="servicesNav">
-            <ul class="servicesUl" data-aos="fade-up" data-aos-duration="2000">
-                <li class="serviceslist-item"><a href="">Branding <span class="wave"><img src="assets/wave.png" alt=""></span></a></li>
-                <li class="serviceslist-item"><a href="">Social <span class="wave"><img src="assets/wave.png" alt=""></span> Media</a></li>
-                <li class="serviceslist-item"><a href="">Art <span class="wave"><img src="assets/wave.png" alt=""></span> direction</a></li>                     
-                <li class="serviceslist-item"><a href="">Photo & <span class="wave"><img src="assets/wave.png" alt=""></span>video</a></li>
-                <li class="serviceslist-item"><a href="">Web <span class="wave"><img src="assets/wave.png" alt=""></span> Design</a></li>
-                <li class="serviceslist-item"><a href="">Influencer <span class="wave"><img src="assets/wave.png" alt=""></span>marketing</a></li>
-                <li class="serviceslist-item"><a href="">Performance <span class="wave"><img src="assets/wave.png" alt=""></span></a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <!--------------------- Porfolio------------------>
-    <div class="lineas-separador">
-        <img src="assets/LINEAS2.png" alt="">
-    </div>
-
-    <section class="portfolio">
-
-        <h3 class="titulo" data-aos="fade-up">portfolio</h3>
-
-        <div class="imagen_container" data-aos="fade-up">
-            <img src="assets/1.png" alt="">
-            <p>Branding</p>
-        </div>
-        <div class="imagen_container1" data-aos="fade-up">
-            <img src="assets/2.png" alt="">
-            <p>Campaña</p>
-        </div>
-        <div class="imagen_container" data-aos="fade-up">
-            <img src="assets/3.png" alt="">
-            <p>Branding</p>
-        </div>
-
-    </section>
-
-
-
-
-<!--------------------- Contacto------------------>
-<section class="contact">
-    <div class="contact-separador">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#1d1976" fill-opacity="1" d="M0,64L40,90.7C80,117,160,171,240,165.3C320,160,400,96,480,85.3C560,75,640,117,720,144C800,171,880,181,960,170.7C1040,160,1120,128,1200,112C1280,96,1360,96,1400,96L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
-        </svg>
-    </div>
-   
-    <div class="background">
-        <div class="container_contact">
-            <div class="screen">
-                <div class="screen-header">
-                    <div class="screen-header-left">
-                        <div class="screen-header-button close"></div>
-                        <div class="screen-header-button maximize"></div>
-                        <div class="screen-header-button minimize"></div>
-                    </div>
-                    <div class="screen-header-right">
-                        <div class="screen-header-ellipsis"></div>
-                        <div class="screen-header-ellipsis"></div>
-                        <div class="screen-header-ellipsis"></div>
-                    </div>
+                <div class="imagen_container1 wow animate__animated animate__backInRight">
+                    <img src="assets/2.png" alt="">
+                    <p><i>Contenido</i></p>
                 </div>
-                <div class="screen-body">
-                    <div class="screen-body-item left">
-                        <div class="app-title">
-                            <span>NEW BRAND, NOW WHAT?</span>
-                            <span>LET'S TALK.</span>
-                        </div>
-                        <div class="contacto_redes">
-                            <div class="app-contact">NÚMERO DE CONTACTO : +62 81 314 928 595</div>
-                            <div class="app-contact">NUESTRAS REDES:</div>
-                            <div class="redes">
-                                <a href=""> <i class="fa-brands fa-facebook"></i></a>
-                                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-                                <a href=""> <i class="fa-brands fa-linkedin"></i></a>
+                <div class="imagen_container wow animate__animated animate__backInLeft">
+                    <img src="assets/3.png" alt="">
+                    <p><i>Branding</i></p>
+                </div>
+                <div class="imagen_container1 wow animate__animated animate__backInRight"">
+                    <img src="assets/4.jpg" alt="">
+                    <p><i>Contenido</i></p>
+                </div>
+                <div class="imagen_container wow animate__animated animate__backInLeft">
+                    <img src="assets/5.jpeg" alt="">
+                    <p><i>Rebranding</i></p>
+                </div>
+            </section>
+
+            <!--------------------- Contacto------------------>
+
+            <section class="contact" id="contact">
+                <div class="contact-separador">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                        <path fill="#1d1976" fill-opacity="1" d="M0,64L40,90.7C80,117,160,171,240,165.3C320,160,400,96,480,85.3C560,75,640,117,720,144C800,171,880,181,960,170.7C1040,160,1120,128,1200,112C1280,96,1360,96,1400,96L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+                    </svg>
+                </div>
+            
+                <div class="background">
+                    <div class="container_contact  wow animate__animated animate__zoomIn">
+                        <div class="screen">
+                            <div class="screen-header">
+
+                                <div class="screen-header-right">
+                                    <div class="screen-header-ellipsis"></div>
+                                    <div class="screen-header-ellipsis"></div>
+                                    <div class="screen-header-ellipsis"></div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="screen-body-item">
-                        <div class="app-form">
-                            <div class="app-form-group">
-                                <input class="app-form-control" placeholder="NOMBRE">
-                            </div>
-                            <div class="app-form-group">
-                                <input class="app-form-control" placeholder="EMAIL">
-                            </div>
-                            <div class="app-form-group">
-                                <input class="app-form-control" placeholder="PHONE">
-                            </div>
-                            <div class="app-form-group message">
-                                <input class="app-form-control" placeholder="MENSAJE">
-                            </div>
-                            <div class="app-form-group buttons">
-                                <button class="app-form-button">ENVIAR</button>
+                            <div class="screen-body">
+                                <div class="screen-body-item left">
+                                    <div class="app-title">
+                                        <span>NEW BRAND, NOW WHAT?</span>
+                                        <span>LET'S TALK.</span>
+                                    </div>
+                                    <div class="contacto_redes">
+                                        <div class="app-contact">NÚMERO DE CONTACTO : +34 644 10 23 65</div>
+                                        <div class="app-contact">NUESTRAS REDES:</div>
+                                        <div class="redes">
+                                            <a href=""> <i class="fa-brands fa-facebook"></i></a>
+                                            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                                            <a href=""> <i class="fa-brands fa-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="screen-body-item">
+
+                                    <form id="contactForm" action="https://formspree.io/f/xvgplvob" method="POST">
+                                        <div class="app-form-group">
+                                            <input class="app-form-control" type="text" name="name"id="name" placeholder="NOMBRE*" required>
+                                        </div>
+                                        <div class="app-form-group">
+                                            <input class="app-form-control" type="email" name="_replyto" id="email" placeholder="EMAIL*" required pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$">
+                                        </div>
+                                        <div class="app-form-group">
+                                            <input class="app-form-control" type="number" name="phone" id="phone" placeholder="PHONE">
+                                        </div>
+                                        <div class="app-form-group message">
+                                            <textarea class="app-form-control" name="message" id="messarea" placeholder="MENSAJE*" required></textarea>
+                                        </div>
+                                        <div class="app-form-group buttons">
+                                            <input class="app-form-button" type="submit" value="ENVIAR" id="send">
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
+
+        </main>
+
+        <!--Footer-->
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <img class="footer_logo" src="logo.png" alt="">
+                </div>
+                <div class="footer-section links">
+                    <h2>Links</h2>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contact Us</h2>
+                    <div class="contacto-footer">
+                        <p>Email: info@jeansstore.com</p>
+                        <p>Phone: +34 644 10 23 65</p>
+                        <p>Based in spain, working globally.</p>
+                    </div>
+                
+                </div>
             </div>
-        </div>
-    </div>
-      
-
-</section>
-
-
-</main>
-
-
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section about">
-            <img class="footer_logo" src="logo.png" alt="">
-        </div>
-        <div class="footer-section links">
-            <h2>Links</h2>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-section contact">
-            <h2>Contact Us</h2>
-            <div class="contacto-footer">
-                <p>Email: info@jeansstore.com</p>
-                <p>Phone: +123 456 7890</p>
-                <p>Address: 123 Denim Street, Fashion City</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Marea Sur. All rights reserved.</p>
             </div>
-           
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Marea Sur. All rights reserved.</p>
-    </div>
-</footer>
+        </footer>
 
+        <!--Fontawesome-->
 
+        <script src="https://kit.fontawesome.com/8514b8ee83.js" crossorigin="anonymous"></script>
 
+        <!--WoW-->
+        <script src="js/wow.min.js"></script>
+        <script> new WOW().init();</script>
 
-
-<script src="https://kit.fontawesome.com/8514b8ee83.js" crossorigin="anonymous"></script>
-<!-- GSAP y ScrollTrigger -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-<!-- Locomotive Scroll -->
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-  </script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
-<script>
-    // use a script tag or an external JS file
-    document.addEventListener("DOMContentLoaded", (event) => {
-        gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin,RoughEase,ExpoScaleEase,SlowMo,CustomEase, LocomotiveScroll)
-        // gsap code here!
-    });
-
-</script>
-
-
-<!-- Final script -->
-<script src="script.js"></script>
-</body>
+        <!-- Final script -->
+        <script src="script.js"></script>
+    </body>
 </html>

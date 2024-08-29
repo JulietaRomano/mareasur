@@ -47,13 +47,96 @@
     color: var(--red);
     text-transform: uppercase;
   }
+  /*----------PRELOADER -----------*/
 
+//Preloader
+.preloader.done {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  //background: url('../images/decor/bg_preloader.jpg') 50% 50% no-repeat;
+  //background-size: cover;
+  background-color: var(--blue);
+  z-index: 1000;
+  //opacity: 1;
+  transition: all 0.5s;
+  visibility: visible;
+
+}
+
+.preloader__img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.preloader__text{
+  font-family: Arial;
+  font-size: 1.25rem;
+  //line-height: 0;
+  fill: #fff;
+}
+
+.path {
+ stroke-dasharray: 96.40058135986328;
+ stroke-dashoffset: 96.40058135986328;  
+}
+
+.path_top {
+ animation: dash_top 2s ease infinite;
+} 
+
+.path_middle {
+ animation: dash_middle 2s ease infinite;
+}
+
+.path_bottom {
+ animation: dash_bottom 2s ease infinite;
+}
+
+
+@keyframes dash_top {
+from {
+  stroke-dashoffset: 86.40058135986328;
   
+}
+to {
+  stroke-dashoffset: 0;
+}
+}
+
+@keyframes dash_middle {
+from {
+  stroke-dashoffset: 76.40058135986328;
+  
+}
+to {
+  stroke-dashoffset: 0;
+}
+}
+
+@keyframes dash_bottom {
+from {
+  stroke-dashoffset: 66.40058135986328;
+  
+}
+to {
+  stroke-dashoffset: 0;
+}
+}
+
   /* --------------------- Menu ---------------------*/
   
   /*Menu_Web*/
   .nav_menu{
-    width: 100%;
+    width: 100vw;
     background-color: white;
     border-bottom: 0.0063rem solid #333;
     display: flex;
@@ -98,7 +181,6 @@
     height: 1.875rem;
   }
   
-
   /*---------------- Menu_Responsive ---------------------*/
 
 .menuResponsive{
@@ -292,7 +374,6 @@
 }
 
 
-
 /*-----------------------*/
 #by {
   font-family: 'Arima Madurai', cursive;
@@ -303,22 +384,6 @@
   right: 2.5%; 
 }
 
-/*
-light-blue: #C1D0D0;
-dark-blue: #4A676A;
-cream: #FFEAA5;
-yellow: #FFB037;
-*/
-
-
-
-
-  
-
-
-
-  
-  
   /*-------------------------- Portada -------------------------*/
   /*Portada*/
 
@@ -367,12 +432,12 @@ yellow: #FFB037;
   }
   
   .typing-demo {
-    width: 19ch;
+    width: 21ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 0.1875rem solid;
-    font-family: monospace;
+    font-family: "Homemade Apple", cursive;
     font-size: 1.5em;
     text-align: center;
     color: var(--red);
@@ -390,14 +455,11 @@ yellow: #FFB037;
     }
   }
 
-    /*-------------------------- ABOUT US -------------------------*/
-
-
- 
+  /*-------------------------- ABOUT US -------------------------*/
       
 .aboutUs{
-    background-image: url(../assets/linie.png);
-  background-size: cover;
+      background-image: url(../assets/aboutLineas.png);
+      background-size: cover;
       height: 95vh;
       background-position: 70%87%;
       display: flex;
@@ -410,12 +472,15 @@ yellow: #FFB037;
   
       .ab{
         background-color: rgb(255, 255, 255);
-        padding: 1.875rem;
+        padding: 4rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       
       h3{
-        font-size: 3rem;
+        font-size: 2.3rem;
         font-weight: 300;
         font-family: 'amandine';
         width: 90%
@@ -425,6 +490,11 @@ yellow: #FFB037;
   .i{
     font-weight: 400;
     color: var(--red);
+  }
+  .apple{
+    font-family: "Homemade Apple", cursive; 
+    color: var(--red);
+    font-size: 2rem;
   }
   
   /*------------------SERVICIOS--------------------*/
@@ -451,7 +521,6 @@ yellow: #FFB037;
         }      
     }
 }
-
 
 
 .serviceslist-item {
@@ -486,7 +555,7 @@ height: 2rem;
         padding-left: 2rem;
         img{
             margin-top: 10%;
-            width: 45%;
+            width: 38%;
             box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
             border-radius: 1rem;
         }
@@ -504,9 +573,10 @@ height: 2rem;
         }
     }
     p{
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        color: var(--red);
+        font-family: 'amandine';
+        
     }
 }
                            
@@ -561,7 +631,7 @@ height: 2rem;
   .screen-header {
     display: flex;
     align-items: center;
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 1.25rem;
     background: #ededed;
     border-top-left-radius: 0.9375rem;
     border-top-right-radius: 0.9375rem;
@@ -579,18 +649,7 @@ height: 2rem;
     border-radius: 0.5rem;
     background: white;
   }
-  
-  .screen-header-button.close {
-    background: var(--red);
-  }
-  
-  .screen-header-button.maximize {
-    background: var(--blueGreen);
-  }
-  
-  .screen-header-button.minimize {
-    background: var(--green);
-  }
+
   
   .screen-header-right {
     display: flex;
@@ -641,8 +700,8 @@ height: 2rem;
     background: var(--red);
   }
   .contacto_redes{
-   
     .redes{
+
         margin-top: .5rem;
         display: flex;
         justify-content: space-between;
@@ -704,7 +763,9 @@ height: 2rem;
   }
   
   .app-form-button:hover {
-    color: var(--red);
+    
+    color: rgb(249, 46, 46);
+    transform: scale(1.3);
   }
   
   .credits {
@@ -770,455 +831,13 @@ height: 2rem;
 .lineas-separador{
     margin-top: 2%;
     margin-bottom: 10%;
+
     img{
         width: 100vw;
     }
 }
 
-
-
-/*----------PRELOADER -----------*/
-
-
-
-
-//preloader
-.preloader.done {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease;
-}
-
-.preloader {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    //background: url('../images/decor/bg_preloader.jpg') 50% 50% no-repeat;
-    //background-size: cover;
-    background-color: #03798a;
-    z-index: 1000;
-    //opacity: 1;
-    transition: all 0.5s;
-    visibility: visible;
-    
-
-    // &.done {
-    //     opacity: 0;
-    //     visibility: hidden;
-    // }
-}
-
-.preloader__img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.preloader__text{
-		font-family: Arial;
-    font-size: 1.25rem;
-    //line-height: 0;
-    fill: #fff;
-}
-
-.path {
-   stroke-dasharray: 96.40058135986328;
-   stroke-dashoffset: 96.40058135986328;  
- }
-
-.path_top {
-   animation: dash_top 2s ease infinite;
-} 
-
-.path_middle {
-   animation: dash_middle 2s ease infinite;
-}
-
-.path_bottom {
-   animation: dash_bottom 2s ease infinite;
-}
-
-
-@keyframes dash_top {
-  from {
-    stroke-dashoffset: 86.40058135986328;
-    
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes dash_middle {
-  from {
-    stroke-dashoffset: 76.40058135986328;
-    
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes dash_bottom {
-  from {
-    stroke-dashoffset: 66.40058135986328;
-    
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*SECCION SCROLL LATERAL*/
-
-
-
-.sectionTop, .section{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(0, 0, 0);
-    font-family: 'amandine';
-    font-size: 1.5rem;
-}
-
-.top{
-    background-color: red;
-
-    .title{
-        font-size: 6.25rem;
-    }
-}
-
-.section1{
-    background-image: url(../assets/linie.png);
-    background-size: cover;
-}
-
-.section2{
-    background-image: url(../assets/linie2.png);
-    background-size: cover;
-}
-
-.section3{
-    background-image: url(../assets/linie.png);
-    background-size: cover;
-}
-
-.hide{
-    display: none;
-}
-
-.container{
-    display: flex;
-    width: 300vw;
-    white-space: nowrap;
-}
-
-.section{
-    width: 100vw;
-}
-
-.wrap{
-    overflow-x: hidden;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*ANIMACION TEXTO ABOUT US*/
-:root {
-	--duration: 5s;
-	--iterations: infinite;
-}
-.spanText{
-    font: 4rem;
-}
-.box{
-    padding: 2.5rem 9.375rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
-    background-color: white;
-    line-height: 4.5rem;
-    h3{
-        
-        font-size: 4rem;
-        font-weight: 300;
-        font-family: 'Roseblue';
-    }
-}
-
-.reveal-text,
-.reveal-text::after {
-    font-weight: 500;
-    animation-delay:1s;
-	animation-iteration-count: var(--iterations, 1);
-	animation-duration: var(--duration, 5000ms);
-	animation-fill-mode: both;
-	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
-}
-.reveal-text:first-child,
-.reveal-text:first-child::after{
-    font-size:4rem;
-  animation-delay:1s;
-}
-.reveal-text:last-child,
-.reveal-text:last-child::after{
-    font-size: 4rem;
-    animation-delay:2s;
-}
-
-
-.reveal-text {
-	--animation-duration: var(--duration, 800ms);
-	--animation-iterations: var(--iterations, 2);
-	position: relative;
-	font-size: 1.25rem;
-	animation-name: clip-text;
-	color: #8C239F;
-	white-space: nowrap;
-	cursor: default;
-	&::after {
-		content: "";
-		position: absolute;
-		z-index: 999;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: var(--red);
-		transform: scaleX(0);
-		transform-origin: 0 50%;
-		pointer-events: none;
-		animation-name: text-revealer;
-	}
-
-	
-}
-
-
-@keyframes clip-text {
-  0%,5%{
-    color: #000;
-  }
-  6%,10%{
-    color: var(--red);
-  }
-  11%,97%{
-    color: var(--red);
-  }
-  98%,100%{
-    color: #000;
-  }
-}
-
-
-@keyframes text-revealer {
-	
-	0%, 5% {
-		transform-origin: 0 100%;
-	}
-	
- 	6%, 10% {
-		transform-origin: 100% 50%;		
-	} 
-
-	
-	6% {
-		transform: scaleX(1);
-	}
-	
-	10% {
-		transform: scaleX(0);
-	}
-}
-
-
-
-
-
-
-/*GLICH*/
-
-
-.glitch{  
-    text-align: center;
-    margin: 2rem auto;
-    font-size: 2rem;
-    width: max-content;
-    position: relative;
-  }
-  .glitch:after, .glitch:before {
-    position: absolute;
-    background: white;
-    left: 0;
-    top: 0;
-    width: 100%;
-    content: attr(data-text);
-    clip: rect(0, 56.25rem, 0, 0);
-  }
-  .glitch:after {
-    animation: glitch-anim 2s infinite linear alternate-reverse;
-    left: 0.0625rem;
-    text-shadow: 0.0625rem 0 red;
-  }
-  .glitch:before {
-    animation: glitch-anim-2 3s infinite linear alternate-reverse;
-    left: -0.0625rem;
-    text-shadow: -0.0625rem 0 limegreen;
-  }
-  @keyframes glitch-anim {
-    0% { clip: rect(0.1875rem, 624.9375rem, 5.8125rem, 0); }
-    5% { clip: rect(3.3125rem, 624.9375rem, 4.875rem, 0); }
-    10% { clip: rect(0.625rem, 624.9375rem, 4.6875rem, 0); }
-    15% { clip: rect(2rem, 624.9375rem, 2.5rem, 0); }
-    20% { clip: rect(4.0625rem, 624.9375rem, 3.875rem, 0); }
-    25% { clip: rect(1.9375rem, 624.9375rem, 0.875rem, 0); }
-    30% { clip: rect(5.875rem, 624.9375rem, 5.4375rem, 0); }
-    35% { clip: rect(5.0625rem, 624.9375rem, 2.5625rem, 0); }
-    40% { clip: rect(2.8125rem, 624.9375rem, 3.125rem, 0); }
-    45% { clip: rect(5.125rem, 624.9375rem, 2.5625rem, 0); }
-    50% { clip: rect(4.4375rem, 624.9375rem, 0.1875rem, 0); }
-    55% { clip: rect(4.6875rem, 624.9375rem, 3.75rem, 0); }
-    60% { clip: rect(1.25rem, 624.9375rem, 3.0625rem, 0); }
-    65% { clip: rect(4.1875rem, 624.9375rem, 5.75rem, 0); }
-    70% { clip: rect(2.9375rem, 624.9375rem, 3.4375rem, 0); }
-    75% { clip: rect(3.9375rem, 624.9375rem, 5.625rem, 0); }
-    80% { clip: rect(4.375rem, 624.9375rem, 5.75rem, 0); }
-    85% { clip: rect(2.5625rem, 624.9375rem, 3.75rem, 0); }
-    90% { clip: rect(3.5rem, 624.9375rem, 4.9375rem, 0); }
-    95% { clip: rect(1.3125rem, 624.9375rem, 4.25rem, 0); }
-    100% { clip: rect(0.9375rem, 624.9375rem, 4.5rem, 0); }
-  }
-  
-  @keyframes glitch-anim-2 {
-    0% { clip: rect(4.0625rem, 624.9375rem, 6.1875rem, 0); }
-    5% { clip: rect(5.375rem, 624.9375rem, 4.375rem, 0); }
-    10% { clip: rect(4.9375rem, 624.9375rem, 3.75rem, 0); }
-    15% { clip: rect(0.9375rem, 624.9375rem, 5.5rem, 0); }
-    20% { clip: rect(1.5rem, 624.9375rem, 0.3125rem, 0); }
-    25% { clip: rect(2.1875rem, 624.9375rem, 0.1875rem, 0); }
-    30% { clip: rect(3.5rem, 624.9375rem, 0.6875rem, 0); }
-    35% { clip: rect(0.125rem, 624.9375rem, 2.375rem, 0); }
-    40% { clip: rect(3.75rem, 624.9375rem, 3.125rem, 0); }
-    45% { clip: rect(1.6875rem, 624.9375rem, 0.25rem, 0); }
-    50% { clip: rect(4.9375rem, 624.9375rem, 0.75rem, 0); }
-    55% { clip: rect(1.4375rem, 624.9375rem, 0.5rem, 0); }
-    60% { clip: rect(4.0625rem, 624.9375rem, 3.4375rem, 0); }
-    65% { clip: rect(1.1875rem, 624.9375rem, 0.4375rem, 0); }
-    70% { clip: rect(2.6875rem, 624.9375rem, 1.0625rem, 0); }
-    75% { clip: rect(4.0625rem, 624.9375rem, 5.6875rem, 0); }
-    80% { clip: rect(2.8125rem, 624.9375rem, 4.125rem, 0); }
-    85% { clip: rect(0.1875rem, 624.9375rem, 0.125rem, 0); }
-    90% { clip: rect(3.625rem, 624.9375rem, 5.0625rem, 0); }
-    95% { clip: rect(1.8125rem, 624.9375rem, 1.25rem, 0); }
-    100% { clip: rect(5.125rem, 624.9375rem, 1.75rem, 0); }
-  }
-
-
-
-
-  /*OTRA ANIMACION*/
-
-
-  .textanime p {
-    color: #000000;
-    font-family: 'Roseblue';
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid rgb(154, 6, 1); /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(154, 6, 1) }
-  }
-
-
   /*------FOOTER------*/
- 
-
-
   /* Footer Styles */
 .footer {
     background-color: #ffffff;
@@ -1303,23 +922,77 @@ height: 2rem;
 
 /* ------------------ RESPONSIVE ----------------------*/
 
+@media screen and (max-width:1210px) {
+    /*Contacto separador*/
+    .contact-separador {
+      top: -25%;
+    }
+
+}
 
 
+@media screen and (max-width:756px) {
+  *{
+    font-size: 13px;
+  }
+    /*Portada*/
+    .portada{
 
-@media screen and (max-width:700px) {
+         .frase{
+          height: 65vh;
+         }
+         .video{
+          height: 65vh;
+         }
+    }
+     /*About us*/
+     .aboutUs {
+      height: 60vh;
+      padding-left: 0rem;
+    }
+     /*portfolio*/
+
+     .portfolio .imagen_container img {
+      width: 45%;
+    }
+    /*menu*/
     .nav_menu{
-        display: none;
+      display: none;
     }
     .menuResponsive {
-        display: flex;
-      }
+      position: fixed;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      z-index: 2000;
+    } 
   
+  }
+
+  @media screen and (max-width:616px) {
+    *{
+      font-size: 12px;
+    }
+        /*Contacto separador*/
+        .contact-separador {
+          top: -19%;
+        }
+  }  
+
+  @media screen and (max-width:560px) {
+    *{
+        font-size: 9.5px;
+    }
+    .titulo{
+      font-size: 1.5rem;
+  }
   }
 
   @media screen and (max-width:500px) {
     *{
         font-size: 10px;
     }
+
     .menuResponsive {
         position: fixed;
         background-color: red;
@@ -1328,9 +1001,7 @@ height: 2rem;
         align-items: center;
 
       } 
-    .titulo{
-        font-size: 1.5rem;
-    }
+
     /*Portada*/
     .portada{
         display: flex;
@@ -1343,7 +1014,10 @@ height: 2rem;
            .frase{
             height: 90vh;
              width: 100vw;
+             line-height: 1.6 ;
+
            }
+
       }
       .frase{
         width: 100vw;
@@ -1354,7 +1028,7 @@ height: 2rem;
         padding-left: 0rem;
         line-height: 1.3;
         h3 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 300;
             font-family: "amandine";
             width: 100%;
@@ -1380,7 +1054,7 @@ height: 2rem;
         margin-bottom: 10%;
     }
     .serviceslist-item a {
-        font-size: 3rem;
+        font-size: 2.7rem;
     }
     .wave{
         display: none;
@@ -1431,6 +1105,9 @@ height: 2rem;
         }           
     }
     /*Contacto separador*/
+    .container_contact {
+      width: 90%;
+    }
     .contact-separador {
         top: -16%;
       }
