@@ -210,7 +210,7 @@ to {
     cursor: pointer;
 }
 
-@media screen  and (min-width: 48rem) {
+@media screen  and (min-width: 768px) {
     .navigation__button {
         top: 4rem;
         right: 4rem;
@@ -233,7 +233,7 @@ to {
     transition: all 800ms cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
     .navigation__background {
         top: 4.5rem;
         right: 4.5rem;
@@ -279,10 +279,10 @@ to {
     transition: all .2s;
 }
 
-@media(min-width: 48rem) {
+@media(min-width: 768px) {
     .navigation__link:link,
     .navigation__link:visited {
-        font-size: 3.8rem;
+        font-size: 10rem;
     }
 }
 
@@ -312,7 +312,7 @@ to {
     margin-top: 2.5rem;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
     .navigation__icon {
         margin-top: 3.5rem;
     }
@@ -327,7 +327,7 @@ to {
     background-color: #4A676A;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 768px) {
     .navigation__icon,
     .navigation__icon::before,
     .navigation__icon::after {
@@ -576,6 +576,7 @@ height: 2rem;
         font-size: 1.5rem;
         color: var(--red);
         font-family: 'amandine';
+        font-style:italic;
         
     }
 }
@@ -793,7 +794,7 @@ height: 2rem;
     margin: 0 0.3125rem;
   }
   
-  @media screen and (max-width: 32.5rem) {
+  @media screen and (max-width: 520px) {
     .screen-body {
       flex-direction: column;
     }
@@ -803,19 +804,31 @@ height: 2rem;
     }
   
     .app-title {
-      flex-direction: row;
+      flex-direction: column;
     }
   
     .app-title span {
       margin-right: 0.75rem;
+      font-size: 1.8rem;
     }
   
     .app-title:after {
       display: none;
     }
+    .app-contact{
+      margin-top:1rem;
+      font-size: 1rem;
+    }
+    .contacto_redes .redes {
+      width: 25%;
+        a i{
+        font-size: 1.4rem;
+      }
+    }
+    
   }
   
-  @media screen and (max-width: 37.5rem) {
+  @media screen and (max-width: 600px) {
     .screen-body {
       padding: 2.5rem;
     }
@@ -1016,6 +1029,7 @@ height: 2rem;
              width: 100vw;
              line-height: 1.6 ;
 
+
            }
 
       }
@@ -1102,14 +1116,24 @@ height: 2rem;
                 width: 90%; 
                 padding: 0;
             }        
-        }           
+        } 
+        p{
+          font-size: 2rem;
+        }
+            
     }
     /*Contacto separador*/
     .container_contact {
       width: 90%;
     }
     .contact-separador {
-        top: -16%;
+        top: -15%;
+      }
+      .app-form-control{
+        font-size: 1.1rem;
+      }
+      .app-form-button {
+        font-size: 1.2rem;
       }
   }
   
