@@ -122,12 +122,18 @@
             <div class="aboutUs"  id="about">
                 <div class="ab wow  animate__animated animate__backInUp">
                     <h3>
-                        Somos una <i class="i">agencia digital </i>en movimiento. <br>
+                        Somos una <span class="i">agencia digital </span>en movimiento. <br>
                         El match perfecto entre branding y performance.<br>
                         Un equipo creativo y versátil. <br>
                         Creamos y posicionamos.<br>
-                        <i class="apple">We take care of your brand.</i>
+                        <!-- <i class="apple">We take care of your brand.</i> -->
                     </h3>
+
+                    <div class="wrapper">
+                        <div class="typing-demo typing-demo2" data-scroll data-scroll-speed="2" data-scroll-delay="0.2">
+                            We take care of your brand.
+                        </div>
+                    </div>
                 </div>
             </div> 
 
@@ -156,7 +162,7 @@
             <section class="portfolio">
 
                 <h3 class="titulo wow  animate__animated animate__backInUp">portfolio</h3>
-
+<!-- 
                 <div class="imagen_container wow  animate__animated animate__backInUp" >
                     <img src="assets/1.png" alt="">
                     <p>Branding</p>
@@ -176,7 +182,83 @@
                 <div class="imagen_container wow  animate__animated animate__backInUp">
                     <img src="assets/5.jpeg" alt="">
                     <p>Rebranding</p>
-                </div>
+                </div> --><section id="portfolio">
+    <div class="project wow  animate__animated animate__backInUp">
+        <img class="project__image" src="assets/portfolio/1.png" />
+        <div class="grid__overlay">
+          <button class="viewbutton">Branding</button>
+        </div>
+      </div>
+      
+      <div class="project wow  animate__animated animate__backInUp">
+        <img class="project__image" src="assets/portfolio/2.png" />
+        <div class="grid__overlay">
+          <button class="viewbutton">Packaging</button>
+        </div>
+      </div>
+      
+      <div class="project wow  animate__animated animate__backInUp">
+        <img class="project__image" src="assets/portfolio/v10.png" />
+        <div class="grid__overlay">
+          <button class="viewbutton">Branding</button>
+        </div>
+      </div>
+      
+      <div class="project wow  animate__animated animate__backInUp">
+        <img class="project__image" src="assets/portfolio/9.JPG" />
+        <div class="grid__overlay">
+          <button class="viewbutton">Contenido</button>
+        </div>
+      </div>
+
+      <div class="project wow  animate__animated animate__backInUp">
+        <img class="project__image" src="assets/portfolio/3o.png" />
+        <div class="grid__overlay wow  animate__animated animate__backInUp">
+          <button class="viewbutton">Contenido</button>
+        </div>
+      </div>
+      
+      <div class="project wow  animate__animated animate__backInUp">
+        <img class="project__image" src="" alt="colocar branding Worldeli"/>
+        <div class="grid__overlay">
+          <button class="viewbutton">Branding</button>
+        </div>
+      </div>
+
+      <div class="project wow  animate__animated animate__backInUp">
+        <img class="project__image" src="assets/portfolio/5.png" />
+        <div class="grid__overlay wow  animate__animated animate__backInUp">
+          <button class="viewbutton">Rebranding</button>
+        </div>
+      </div>
+      
+      <div class="project wow  animate__animated animate__backInUp">
+        <img class="project__image" src="assets/portfolio/6.png" />
+        <div class="grid__overlay">
+          <button class="viewbutton">Contenido</button>
+        </div>
+      </div>
+      
+      <div class="project wow  animate__animated animate__backInUp">
+        <img class="project__image" src=""  alt="imagen HUA" />
+        <div class="grid__overlay">
+          <button class="viewbutton">view more</button>
+        </div>
+      </div>
+      <div class="project wow  animate__animated animate__backInUp">
+        <img class="project__image" src="assets/portfolio/8.png" />
+        <div class="grid__overlay wow  animate__animated animate__backInUp">
+          <button class="viewbutton">Branding</button>
+        </div>
+      </div>
+
+      <div class="overlay">
+        <div class="overlay__inner">
+          <button class="close">close X</button>
+          <img>
+        </div>
+      </div>
+    </section>
             </section>
 
             <!--------------------- Contacto------------------>
@@ -209,9 +291,8 @@
                                         <div class="app-contact">NÚMERO DE CONTACTO : +34 644 10 23 65</div>
                                         <div class="app-contact">NUESTRAS REDES:</div>
                                         <div class="redes">
-                                            <a href=""> <i class="fa-brands fa-facebook"></i></a>
-                                            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-                                            <a href=""> <i class="fa-brands fa-linkedin"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/mareasuragencia/"><i class="fa-brands fa-square-instagram"></i></a>
+                                            <a target="_blank" href="https://www.linkedin.com/company/marea-sur-digital-agency/?viewAsMember=true"> <i class="fa-brands fa-linkedin"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -282,6 +363,26 @@
         <!--WoW-->
         <script src="js/wow.min.js"></script>
         <script> new WOW().init();</script>
+        <script>
+            const buttons = document.querySelectorAll('.project');
+            const overlay = document.querySelector('.overlay');
+            const overlayImage = document.querySelector('.overlay__inner img');
+
+            function open(e) {
+            overlay.classList.add('open');
+            const src= e.currentTarget.querySelector('img').src;
+            overlayImage.src = src;
+            }
+
+            function close() {
+            overlay.classList.remove('open');
+            }
+
+            buttons.forEach(button => button.addEventListener('click', open));
+            overlay.addEventListener('click', close);
+
+
+        </script>
 
         <!-- Final script -->
         <script src="script.js"></script>

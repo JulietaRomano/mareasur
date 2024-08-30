@@ -398,12 +398,12 @@ body {
   text-align: center;
   margin: 0rem;
   color: var(--blue);
+  padding-bottom: 1rem;
 }
 
 .wrapper {
   display: grid;
   place-items: center;
-  margin-top: 1rem;
 }
 
 .typing-demo {
@@ -416,6 +416,10 @@ body {
   font-size: 1.5em;
   text-align: center;
   color: var(--red);
+}
+
+.typing-demo2 {
+  width: 30ch;
 }
 
 @keyframes typing {
@@ -443,23 +447,25 @@ body {
   color: rgb(59, 59, 59);
 }
 .aboutUs .ab {
+  width: 60%;
   background-color: rgb(255, 255, 255);
-  padding: 4rem;
+  padding: 3rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .aboutUs h3 {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   font-weight: 300;
   font-family: "amandine";
   width: 90%;
 }
-
-.i {
-  font-weight: 400;
+.aboutUs .i {
   color: var(--red);
+  font-style: italic;
+  font-size: 2.1rem;
 }
 
 .apple {
@@ -517,35 +523,124 @@ body {
 
 /*------------------PORTFOLIO--------------------*/
 .portfolio {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 2%;
   margin-bottom: 20%;
 }
-.portfolio .imagen_container {
-  padding-left: 2rem;
+
+button {
+  cursor: pointer;
 }
-.portfolio .imagen_container img {
-  margin-top: 10%;
-  width: 38%;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  border-radius: 1rem;
+
+#portfolio {
+  width: 95%;
+  background: #ffffff;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  grid-gap: 20px;
+  margin-top: 5rem;
 }
-.portfolio .imagen_container1 {
-  padding-right: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
+
+.project {
+  position: relative;
+  background: var(--blueGreen);
+  overflow: hidden;
+  border-radius: 8px;
 }
-.portfolio .imagen_container1 img {
-  margin-top: 10%;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  border-radius: 1rem;
-  width: 45%;
+
+.project__image {
+  width: 100%;
+  height: 34.375rem;
+  display: block;
+  object-fit: cover;
+  cursor: zoom-in;
 }
-.portfolio p {
+
+.grid__overlay {
+  background: rgba(60, 94, 111, 0.7137254902);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+  cursor: zoom-in;
+}
+
+.project:hover .grid__overlay {
+  transform: translateY(0%);
+}
+
+button.viewbutton {
+  font-family: "Homemade Apple", cursive;
   font-size: 1.5rem;
-  color: var(--red);
-  font-family: "amandine";
-  font-style: italic;
+  background: none;
+  outline: none;
+  font-weight: 100;
+  letter-spacing: 2px;
+  border: none;
+  color: white;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+button.viewbutton:hover {
+  font-weight: 300;
+  transform: scale(1.2);
+}
+
+.overlay {
+  position: fixed;
+  background: rgba(71, 69, 69, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 3;
+}
+
+.overlay.open {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.overlay__inner {
+  background: #ffffff;
+  max-height: 90vh;
+  padding: 20px;
+  position: relative;
+  opacity: 1;
+}
+.overlay__inner img {
+  height: 90vh;
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  background: none;
+  outline: 0;
+  color: #474545;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.close:hover {
+  color: var(--blueGreen);
 }
 
 /*------------------CONTACTO--------------------*/
@@ -775,10 +870,10 @@ body {
     font-size: 1rem;
   }
   .contacto_redes .redes {
-    width: 25%;
+    width: 14%;
   }
   .contacto_redes .redes a i {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
 }
 @media screen and (max-width: 600px) {
@@ -792,7 +887,7 @@ body {
 /*----------LINEAS SEPARADOR -----------*/
 .lineas-separador {
   margin-top: 2%;
-  margin-bottom: 10%;
+  margin-bottom: 6%;
 }
 .lineas-separador img {
   width: 100vw;
@@ -851,7 +946,7 @@ body {
 }
 
 .footer-section a:hover {
-  color: #00aaff;
+  color: var(--red);
 }
 
 .footer-bottom {
@@ -950,6 +1045,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(https://images.pexels.com/photos/2127667/pexels-photo-2127667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+  }
+  .portada .typing-demo {
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
   .portada .video {
     display: none;
@@ -958,6 +1058,10 @@ body {
     height: 90vh;
     width: 100vw;
     line-height: 1.6;
+  }
+  .portada .texto h2 {
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
   .frase {
     width: 100vw;
@@ -977,12 +1081,15 @@ body {
   .aboutUs .ab {
     display: flex;
     align-items: center;
-    padding: 3rem 0.3rem;
+    padding: 4rem 0rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
-    height: 40vh;
+    width: 100%;
+  }
+  .aboutUs .typing-demo2 {
+    height: 3rem;
   }
   .aboutUs .i {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   /*Services*/
   .lista {
@@ -1013,31 +1120,16 @@ body {
     width: 100vw;
   }
   /*Porfolio*/
-  .portfolio .imagen_container {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15%;
-  }
-  .portfolio .imagen_container img {
+  #portfolio {
     width: 90%;
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
   }
-  .portfolio .imagen_container1 {
-    margin-top: 15%;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .overlay__inner {
+    max-height: 70vh;
   }
-  .portfolio .imagen_container1 img {
-    width: 90%;
-    padding: 0;
-  }
-  .portfolio p {
-    font-size: 2rem;
+  .overlay__inner img {
+    height: 100%;
+    width: 100%;
   }
   /*Contacto separador*/
   .container_contact {
@@ -1052,6 +1144,7 @@ body {
   .app-form-button {
     font-size: 1.2rem;
   }
+  /*CONTACTO*/
 }
 
 /*# sourceMappingURL=main.css.map */
