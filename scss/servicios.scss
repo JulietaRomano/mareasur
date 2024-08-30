@@ -1,0 +1,169 @@
+:root {
+    --blue: #1d1976;
+    --blueGreen: #3c5e6f;
+    --beige: #eae9d8;
+    --red: #bf293f;
+    --green: #9eb185;
+    --ligthBlue: #a6bee9;
+    --dark:rgb(32, 32, 32);
+    background-color: #ffffff;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+}
+.header-services{
+    padding-top: 2rem;
+    padding-left: 3rem;
+    a{
+        text-decoration: none;
+    }
+    background-color: #1d1976;
+    .flecha{
+        width: 2.8125rem;
+        height: 2.8125rem;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        color: var(--blue);
+        background-color: whitesmoke;
+        transition: .4s;
+        &:hover{
+            transform: scale(1.1);
+            transform: translate(-1rem,0rem);
+        }
+    }
+}
+  .servicios_main{
+    background-color: #1d1976;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    h1{
+        font-size: 12vw;
+        font-family: amandine;
+        color: white;
+    }
+    .influencerMarketing{
+        font-size: 8vw;
+    }
+    .servicios_textos{
+        margin-top: 2rem;
+        p{
+            text-align: center;
+            font-family: quasimoda;
+            font-size: 1.5vw;
+            text-transform: uppercase;
+            color: var(--beige);
+            padding-bottom: 2rem;
+        }
+    }
+    .ola{
+        width: 60vw;
+        height: 10vh;
+        background-image: url(../assets/hola2.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+  }
+
+
+
+
+
+
+
+  /*MEDIA QUERIES SERVICIOS*/
+
+
+  @media screen and (max-width:755px) {
+    .servicios_main{
+        .ola{
+            width: 60vw;
+            height: 7vh;
+            background-size: contain;
+        }
+    
+      }
+
+  }
+
+
+  @media screen and (max-width:600px) {
+    .header-services{
+        padding-top: 2rem;
+        padding-left: 3rem;
+
+        .flecha{
+            width: 3.5rem;
+            height:3.5rem;
+            i{
+                font-size: 2rem;
+            }
+            &:hover{
+                transform: scale(1.1);
+                transform: translate(-1rem,0rem);
+            }
+        }
+        
+    }
+
+    .servicios_main{
+        background-color: #1d1976;
+        height: 100vh;
+        // h1{
+        //     font-size: 12vw;
+        //     font-family: amandine;
+        //     color: white;
+        // }
+        .servicios_textos{
+            margin-top: 0rem;
+            padding: 3rem;
+            p{
+                font-size: 2.3vw;
+                padding-bottom: 2rem;
+            }
+        }
+        .ola{
+                height: 5vh;
+        }
+    
+      }
+  }  
+
+  @media screen and (max-width:450px) {
+
+    .servicios_main{
+        h1{
+            font-size: 13vw;
+        }
+        .servicios_textos{
+            margin-top: 0rem;
+            padding: 3rem;
+            p{
+                font-size: 3.2vw;
+                padding-bottom: 2rem;
+            }
+        }
+        .ola{
+                height: 5vh;
+        }
+    
+      }
+  }  
+
+  @media screen and (max-width:450px) {
+
+    .servicios_main{
+
+        .ola{
+                height: 4vh;
+        }
+    
+      }
+  }  

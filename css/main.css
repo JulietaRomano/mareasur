@@ -39,6 +39,10 @@ body {
   padding: 0;
 }
 
+h1 {
+  font-size: 0;
+}
+
 .titulo {
   text-align: center;
   font-weight: 500;
@@ -403,7 +407,6 @@ body {
 
 .typing-demo {
   width: 21ch;
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.1875rem solid;
@@ -413,8 +416,8 @@ body {
   color: var(--red);
 }
 
-.typing-demo2 {
-  width: 30ch;
+.typing-demo.animate {
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
 }
 
 @keyframes typing {
@@ -427,6 +430,10 @@ body {
     border-color: transparent;
   }
 }
+.typing-demo2 {
+  width: 30ch;
+}
+
 /*-------------------------- ABOUT US -------------------------*/
 .aboutUs {
   background-image: url(../assets/aboutLineas.png);
@@ -756,7 +763,7 @@ button.viewbutton:hover {
   margin-top: 0.5rem;
   display: flex;
   justify-content: space-between;
-  width: 20%;
+  width: 3vw;
   color: var(--blue);
   font-size: 1.3rem;
 }
@@ -985,6 +992,9 @@ button.viewbutton:hover {
   .container_contact {
     width: 90%;
   }
+  .contacto_redes .redes {
+    width: 16%;
+  }
 }
 @media screen and (max-width: 756px) {
   * {
@@ -1016,6 +1026,9 @@ button.viewbutton:hover {
     display: flex;
     align-items: center;
     z-index: 2000;
+  }
+  .contacto_redes .redes {
+    width: 14%;
   }
 }
 @media screen and (max-width: 616px) {
@@ -1141,6 +1154,143 @@ button.viewbutton:hover {
     font-size: 1.2rem;
   }
   /*CONTACTO*/
+}
+:root {
+  --blue: #1d1976;
+  --blueGreen: #3c5e6f;
+  --beige: #eae9d8;
+  --red: #bf293f;
+  --green: #9eb185;
+  --ligthBlue: #a6bee9;
+  --dark:rgb(32, 32, 32);
+  background-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header-services {
+  padding-top: 2rem;
+  padding-left: 3rem;
+  background-color: #1d1976;
+}
+.header-services a {
+  text-decoration: none;
+}
+.header-services .flecha {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--blue);
+  background-color: whitesmoke;
+  transition: 0.4s;
+}
+.header-services .flecha:hover {
+  transform: scale(1.1);
+  transform: translate(-1rem, 0rem);
+}
+
+.servicios_main {
+  background-color: #1d1976;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.servicios_main h1 {
+  font-size: 12vw;
+  font-family: amandine;
+  color: white;
+}
+.servicios_main .influencerMarketing {
+  font-size: 8vw;
+}
+.servicios_main .servicios_textos {
+  margin-top: 2rem;
+}
+.servicios_main .servicios_textos p {
+  text-align: center;
+  font-family: quasimoda;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  color: var(--beige);
+  padding-bottom: 2rem;
+}
+.servicios_main .ola {
+  width: 60vw;
+  height: 10vh;
+  background-image: url(../assets/hola2.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/*MEDIA QUERIES SERVICIOS*/
+@media screen and (max-width: 755px) {
+  .servicios_main .ola {
+    width: 60vw;
+    height: 7vh;
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header-services {
+    padding-top: 2rem;
+    padding-left: 3rem;
+  }
+  .header-services .flecha {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .header-services .flecha i {
+    font-size: 2rem;
+  }
+  .header-services .flecha:hover {
+    transform: scale(1.1);
+    transform: translate(-1rem, 0rem);
+  }
+  .servicios_main {
+    background-color: #1d1976;
+    height: 100vh;
+  }
+  .servicios_main .servicios_textos {
+    margin-top: 0rem;
+    padding: 3rem;
+  }
+  .servicios_main .servicios_textos p {
+    font-size: 2.3vw;
+    padding-bottom: 2rem;
+  }
+  .servicios_main .ola {
+    height: 5vh;
+  }
+}
+@media screen and (max-width: 450px) {
+  .servicios_main h1 {
+    font-size: 13vw;
+  }
+  .servicios_main .servicios_textos {
+    margin-top: 0rem;
+    padding: 3rem;
+  }
+  .servicios_main .servicios_textos p {
+    font-size: 3.2vw;
+    padding-bottom: 2rem;
+  }
+  .servicios_main .ola {
+    height: 5vh;
+  }
+}
+@media screen and (max-width: 450px) {
+  .servicios_main .ola {
+    height: 4vh;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
