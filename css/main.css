@@ -122,7 +122,6 @@ body {
 /* --------------------- Menu ---------------------*/
 /*Menu_Web*/
 .nav_menu {
-  width: 100vw;
   background-color: white;
   border-bottom: 0.0063rem solid #333;
   display: flex;
@@ -142,10 +141,6 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-}
-
-.menu ul li {
-  margin: 0 0.9375rem;
 }
 
 .menu ul li a {
@@ -478,7 +473,7 @@ body {
 /*servicios*/
 .lista {
   padding-top: 8%;
-  padding-bottom: 8%;
+  padding-bottom: 2%;
 }
 .lista .servicesNav {
   margin-top: 5%;
@@ -978,6 +973,18 @@ button.viewbutton:hover {
   .contact-separador {
     top: -25%;
   }
+  /*Porfolio*/
+  .overlay__inner {
+    max-height: 70vh;
+  }
+  .overlay__inner img {
+    height: 100%;
+    width: 100%;
+  }
+  /*Contacto separador*/
+  .container_contact {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 756px) {
   * {
@@ -1050,6 +1057,7 @@ button.viewbutton:hover {
   }
   .portada .typing-demo {
     text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: var(--beige);
   }
   .portada .video {
     display: none;
@@ -1060,7 +1068,7 @@ button.viewbutton:hover {
     line-height: 1.6;
   }
   .portada .texto h2 {
-    color: white;
+    color: var(--beige);
     text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
   .frase {
@@ -1092,13 +1100,8 @@ button.viewbutton:hover {
     font-size: 2rem;
   }
   /*Services*/
-  .lista {
-    padding-top: 10%;
-    padding-bottom: 10%;
-  }
   .lista .servicesNav .servicesUl {
     margin-top: 10%;
-    margin-bottom: 10%;
   }
   .serviceslist-item a {
     font-size: 2.7rem;
@@ -1123,13 +1126,6 @@ button.viewbutton:hover {
   #portfolio {
     width: 90%;
     grid-template-columns: repeat(1, minmax(250px, 1fr));
-  }
-  .overlay__inner {
-    max-height: 70vh;
-  }
-  .overlay__inner img {
-    height: 100%;
-    width: 100%;
   }
   /*Contacto separador*/
   .container_contact {
